@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react'; // Import useCallback
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || '';
 const DepartmentPage = () => {
   const [params] = useSearchParams();
   const deptId = params.get("id");

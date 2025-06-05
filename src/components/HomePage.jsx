@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL || '';
 const HomePage = () => {
   const [hospital, setHospital] = useState({});
   const [departments, setDepartments] = useState([]);
